@@ -47,13 +47,13 @@ jobs:
         run: npm run build --if-present
 
       - name: Configure 404
-        run: sed -i -e 's@{{ site.github.url }}@$TOPPAGE@g' 404.html
+        run: sed -i -e 's@{{ site.github.url }}@$TOPPAGE@g' public/404.html
         env:
           TOPPAGE: ${{ github.event.repository.name }}
 
-      - uses: actions/upload-pages-artifact@v1.0.3
+      - uses: actions/upload-pages-artifact@v1
         with:
-          path: '. --exclude=node_modules --exclude=elm-stuff --exclude=package.json --exclude=package-lock.json --exclude=elm.json --exclude=.gitignore --exclude=README.md'
+          path: 'public/'
 
   # Deployment job
   deploy:
