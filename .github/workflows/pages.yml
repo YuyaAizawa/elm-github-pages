@@ -46,7 +46,7 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v1.0.3
         with:
           path: '. --exclude=node_modules --exclude=elm-stuff --exclude=package.json --exclude=package-lock.json --exclude=elm.json --exclude=.gitignore --exclude=README.md'
 
