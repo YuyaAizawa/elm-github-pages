@@ -1,4 +1,4 @@
-# elm-pages
+# elm-github-pages
 
 Elmで作成したSPAをGitHub Pagesで公開するときのテンプレート．
 push時にGitHub Actionsを使って自動でコンパイル＆デプロイする．
