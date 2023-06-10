@@ -19,6 +19,14 @@ push時にGitHub Actionsを使って自動でコンパイル＆デプロイす�
 
 ![image](https://user-images.githubusercontent.com/7776405/188118448-d2873226-49ca-4811-8fad-87431678eb0d.png)
 
+## ローカルで簡易的にデプロイ
+
+```bash
+elm make src/Main.elm --output=public/js/elm.js
+```
+して`index.html`を開く．  
+※`public/js/elm.js`は`.gitignore`してある．
+
 ## その他
 
 イシュー，プルリク歓迎！
